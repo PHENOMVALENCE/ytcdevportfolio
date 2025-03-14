@@ -1,0 +1,242 @@
+/* style2.css */
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Modern, clean font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.7; /* Improved line spacing */
+    color: #333;
+    background-color: #f8f8f8; /* Slightly lighter background */
+}
+
+header {
+    background-image: url('image4.jpg'); /* Replace with your header image */
+    background-size: cover;
+    background-position:center;
+    color: white;
+    text-align: center;
+    padding: 200px 20px;
+    position: relative;
+    z-index: 1; /* Ensure header is above other elements */
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Refined overlay */
+    z-index: -1; /* Place overlay behind content */
+}
+
+header h1 {
+    font-size: 3.8em; /* Larger, bolder header */
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Enhanced shadow */
+    font-weight: 700; /* Bolder font */
+}
+
+header p {
+    font-size: 1.4em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+}
+
+nav {
+    background-color: #2c3e50; /* Darker, professional nav */
+    text-align: center;
+    padding: 25px 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 30px;
+}
+
+nav ul li a {
+    color: #ecf0f1; /* Lighter text for nav */
+    text-decoration: none;
+    padding: 14px 22px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    background-color: #34495e; /* Slightly lighter hover */
+    transform: translateY(-3px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+section {
+    width: 100%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px; /* Increased min height */
+    position: relative;
+}
+
+section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+section:hover {
+    transform: scale(1.01); /* Reduced scale effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    background-color: rgba(52, 152, 219, 0.9); /* More vibrant blue */
+    color: rgb(20, 5, 5);
+    padding: 35px;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+section .content {
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.95); /* Even lighter background */
+    max-width: 700px; /* Increased content width */
+    text-align: left;
+    z-index: 1;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+section .content ul {
+    list-style-type: disc;
+    margin-left: 25px;
+}
+
+section .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    z-index: 1;
+}
+
+section .image-container img {
+    max-width: 48%; /* Slightly larger images */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin: 15px;
+    transition: transform 0.3s ease;
+}
+
+section .image-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+}
+
+#about {
+    background-image: url('about-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(24, 17, 17);
+}
+
+#experience {
+    background-image: url('experience-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(7, 6, 6);
+}
+
+#projects {
+    background-image: url('projects-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(16, 14, 14);
+}
+
+#skills {
+    background-color: #ecf0f1; /* Light gray background */
+    text-align: center;
+    padding: 80px 0; /* Increased padding */
+}
+
+#skills ul {
+    list-style: none;
+    padding: 40px;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+#skills ul li {
+    display: inline-block;
+    margin: 20px;
+    padding: 18px 35px;
+    background-color: #3498db; /* Blue skill buttons */
+    color: rgb(21, 19, 19);
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#skills ul li:hover {
+    background-color: #2980b9; /* Darker blue hover */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#contact {
+    text-align: center;
+    padding: 100px 0; /* Increased padding */
+    background-color: #e0e0e0; /* Lighter background */
+}
+
+#contact a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+    color: #2980b9;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 20px 0;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    section:nth-child(even) {
+        flex-direction: column;
